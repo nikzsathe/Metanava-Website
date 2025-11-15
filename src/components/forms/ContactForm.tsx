@@ -1,11 +1,9 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { RECAPTCHA_SITE_KEY } from '../../config/recaptcha';
 
 interface FormData {
    user_name: string;
@@ -34,23 +32,14 @@ const ContactForm = () => {
    const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
 
    const form = useRef<HTMLFormElement>(null);
-   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-   const [captchaError, setCaptchaError] = useState<string | null>(null);
 
    const sendEmail = () => {
-      if (RECAPTCHA_SITE_KEY && !captchaToken) {
-         setCaptchaError("Please verify you are human.");
-         return;
-      }
-
       if (form.current) {
          emailjs.sendForm('themegenix', 'template_hdr7ic6', form.current, 'QOBCxT0bzNKEs-CwW')
             .then((result) => {
                const notify = () => toast('Message sent successfully', { position: 'top-center' });
                notify();
                reset();
-               setCaptchaToken(null);
-               setCaptchaError(null);
                console.log(result.text);
             }, (error) => {
                console.log(error.text);
@@ -88,20 +77,6 @@ const ContactForm = () => {
                <p className="form_error">{errors.message?.message}</p>
             </div>
             <div className="col-12">
-               {RECAPTCHA_SITE_KEY && (
-                  <div className="mb-20">
-                     <ReCAPTCHA
-                        sitekey={RECAPTCHA_SITE_KEY}
-                        onChange={(token) => {
-                           setCaptchaToken(token);
-                           setCaptchaError(null);
-                        }}
-                        onExpired={() => setCaptchaToken(null)}
-                     />
-                     <input type="hidden" name="g-recaptcha-response" value={captchaToken ?? ""} />
-                     {captchaError && <p className="form_error">{captchaError}</p>}
-                  </div>
-               )}
                <button type="submit" className="td-btn-group">
                   <span className="td-btn-circle">
                      <i className="fa-solid fa-arrow-right"></i>
