@@ -1,0 +1,69 @@
+@import "react-toastify/dist/ReactToastify.css";
+@import "swiper/css/bundle";
+@import "react-responsive-modal/styles.css";
+
+@import "../../public/assets/css/animate.css";
+@import "../../public/assets/css/bootstrap.min.css";
+@import "../../public/assets/css/defauls-spacing.css";
+@import "../../public/assets/css/effect-slicer.css";
+@import "../../public/assets/css/fontawesome-all.min.css";
+@import "../../public/assets/scss/main.scss";
+
+/* Metanova custom overrides */
+body {
+  color: #1c1d1f;
+}
+
+.td-header-home {
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.td-service-card {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.td-service-card .td-service-count {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--td-theme-primary);
+  background: rgba(92, 196, 204, 0.15);
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.td-service-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.td-service-card ul li {
+  list-style: disc;
+}
+
+.td-service-card .td-btn-2 {
+  margin-top: 10px;
+}
+
+.career-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 45px rgba(5, 12, 34, 0.06);
+}
+
+.career-hero-thumb img {
+  min-height: 340px;
+  object-fit: cover;
+}
