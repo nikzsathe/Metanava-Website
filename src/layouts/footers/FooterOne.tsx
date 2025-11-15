@@ -16,7 +16,7 @@ const FooterOne = ({ style }: DataType) => {
                         <Link to="/">
                            <img src="/assets/img/logo/logo-white.png" alt="" />
                         </Link>
-                        <p className="td-footer-text mt-20">Metanova Tech delivers compliant B2B lead generation, demand generation, and digital marketing solutions for enterprise brands.</p>
+                        <p className="td-footer-text mt-20 text-white">Metanova Tech delivers compliant B2B lead generation, demand generation, and digital marketing solutions for enterprise brands.</p>
                      </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-sm-6">
@@ -27,6 +27,7 @@ const FooterOne = ({ style }: DataType) => {
                            <li><Link to="/about">About</Link></li>
                            <li><Link to="/service">Services</Link></li>
                            <li><Link to="/blog">Insights</Link></li>
+                           <li><Link to="/careers">Careers</Link></li>
                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
                      </div>
@@ -85,6 +86,17 @@ const FooterOne = ({ style }: DataType) => {
                                        <path d="M1.57881 3.15763C2.45077 3.15763 3.15763 2.45077 3.15763 1.57881C3.15763 0.706859 2.45077 0 1.57881 0C0.706859 0 0 0.706859 0 1.57881C0 2.45077 0.706859 3.15763 1.57881 3.15763Z" fill="currentColor" />
                                     </svg>
                                  </a>
+                              </div>
+                           </div>
+                           <div className="col-12">
+                              <div className="td-footer-legal-links text-center mt-10">
+                                 <Link to="/privacy-policy">Privacy Policy</Link>
+                                 <span>•</span>
+                                 <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
+                                 <span>•</span>
+                                 <Link to="/cookies-policy">Cookies Policy</Link>
+                                 <span>•</span>
+                                 <Link to="/casl-policy">CASL Compliance</Link>
                               </div>
                            </div>
                         </div>

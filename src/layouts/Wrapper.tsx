@@ -6,6 +6,7 @@ import useSplitTextTitleAnim from "../hooks/useSplitTextTitleAnim";
 import useSplitTextBgAnim from "../hooks/useSplitTextBgAnim";
 import ScrollToTop from "../components/common/ScrollToTop";
 import CustomCursor from "../components/common/CustomCursor";
+import CookieConsent from "../components/common/CookieConsent";
 
 type WrapperProps = {
   children: ReactNode;
@@ -23,6 +24,7 @@ const Wrapper = ({ children }: WrapperProps) => {
       {children}
       <ScrollToTop />
       <CustomCursor />
+      <CookieConsent />
       <ToastContainer position="top-center" />
     </>
   );

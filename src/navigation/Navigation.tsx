@@ -31,6 +31,10 @@ import ContactMain from '../pages/ContactMain';
 import ErrorMain from '../pages/ErrorMain';
 import ServiceDetailsDynamic from '../pages/ServiceDetailsDynamic';
 import CareerMain from '../pages/CareerMain';
+import PrivacyPolicyMain from '../pages/PrivacyPolicyMain';
+import TermsConditionsMain from '../pages/TermsConditionsMain';
+import CookiesPolicyMain from '../pages/CookiesPolicyMain';
+import CASLPolicyMain from '../pages/CASLPolicyMain';
 
 const AppNavigation = () => {
    return (
@@ -67,6 +71,10 @@ const AppNavigation = () => {
             <Route path="/blog-details" element={<BlogDetailsMain />} />
             <Route path="/contact" element={<ContactMain />} />
             <Route path="/careers" element={<CareerMain />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyMain />} />
+            <Route path="/terms-and-conditions" element={<TermsConditionsMain />} />
+            <Route path="/cookies-policy" element={<CookiesPolicyMain />} />
+            <Route path="/casl-policy" element={<CASLPolicyMain />} />
             <Route path="*" element={<ErrorMain />} />
          </Routes>
       </Router>

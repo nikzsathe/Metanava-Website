@@ -1,0 +1,34 @@
+Canada's Anti-Spam Legislation (CASL)
+Metanova Tech Private Limited and/or its associated companies (collectively referred to as "Metanova Tech") Policy Statement. This document delineates the policy of Metanova Tech and aims to provide reasonable assurance that (i) a consistent process is adhered to concerning the distribution of commercial electronic messages (CEMs) to Metanova Tech clients and prospective clients in Canada, and (ii) Metanova Tech employees sending commercial electronic messages from and/or to computer systems in Canada comply with the requirements of CASL.
+
+The Metanova Tech Anti-Spam Policy ("Anti-Spam Policy") and associated procedures (the "CASL Procedures") mandate that all Metanova Tech employees sending CEMs from and/or to computer systems in Canada or to an electronic address that will be accessed from a computer system in Canada comply with CASL. This policy also aims to ensure that all CEMs sent by or on behalf of Metanova Tech, or using a Metanova Tech email address or device, adhere to CASL.
+
+Policy Details
+Metanova Tech is committed to complying with the provisions of CASL and ensuring that all electronic messages sent to clients, prospects, and other applicable parties follow the legislation. This policy may be supplemented with additional procedures to reinforce anti-spam compliance.
+
+Application
+This Policy applies to all Metanova Tech employees who may send CEMs from and/or to computer systems in Canada or to any electronic address accessed from Canada. It aligns with CASL requirements for Metanova Tech operations and is designed to prevent damaging and deceptive forms of spam in Canada. All other policies and procedures are construed in a manner consistent with the Anti-Spam Policy.
+
+Consent
+Metanova Tech obtains express, opt-in consent before sending a CEM to anyone who has not had an existing business relationship within two years prior to the date the CEM is sent. Requests for consent are distinct from other communications and cannot be bundled as a condition of agreement. Verbal consent is acceptable provided records of the consent details are maintained in a database.
+
+Form and Content of CEMs
+All CEMs must comply with CASL requirements, including identifying the sender, providing contact information, and including a functional unsubscribe mechanism.
+
+Storage of Relationship Details
+Metanova Tech maintains records of relationships with clients and prospects, including express consent and relationships giving rise to implied consent. Records are retained for a minimum of three years after Metanova Tech stops sending CEMs to the client or prospect.
+
+Compliance by Third Parties
+Contracts with third-party service providers who may send CEMs on behalf of Metanova Tech must include clauses obligating the service provider to comply with CASL.
+
+Unsubscribe Mechanism
+All CEMs must include an unsubscribe mechanism to allow recipients to withdraw consent. Metanova Tech honors unsubscribe requests within 10 days.
+
+Policy Administration
+The Anti-Spam Policy is managed by the Compliance department of each Metanova Tech legal entity and reviewed annually. Changes or exceptions require approval from the respective Metanova Tech Board or equivalent.
+
+Review and Approvals
+Metanova Tech Compliance is responsible for reviewing and revising this Policy, subject to Board approval. The Policy is reviewed annually or as needed.
+
+Enforcement and Audit
+Compliance with this Policy may be audited at any time. Failure to comply may result in disciplinary action in accordance with Metanova Tech policies.

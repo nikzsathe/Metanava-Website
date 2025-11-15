@@ -64,6 +64,18 @@ const menu_data: MenuItem[] = [
         link: "/contact",
         has_dropdown: false,
     },
+    {
+        id: 7,
+        title: "Legal",
+        link: "#",
+        has_dropdown: true,
+        sub_menus: [
+            { link: "/privacy-policy", title: "Privacy Policy" },
+            { link: "/terms-and-conditions", title: "Terms & Conditions" },
+            { link: "/cookies-policy", title: "Cookies Policy" },
+            { link: "/casl-policy", title: "CASL Compliance" },
+        ],
+    },
 ];
 
 export default menu_data;
