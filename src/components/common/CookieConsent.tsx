@@ -33,7 +33,10 @@ const CookieConsent = () => {
         </button>
         <p className="cookie-banner__eyebrow">Manage Consent</p>
         <h4>We use cookies to power a better experience</h4>
-        <p>
+        <p className="cookie-banner__text">
+          We use cookies to enhance your experience and analyze site usage. Accepting allows us to process analytics and improve our services.
+        </p>
+        <p className="cookie-banner__text-full">
           To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting
           to these technologies allows us to process marketing analytics, browsing behavior, and unique IDs on this site. Not
           consenting may adversely affect certain features and functions.
