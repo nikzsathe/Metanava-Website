@@ -67,17 +67,6 @@ const rc_data: RcData[] = [
 const Sidebar = () => {
    return (
       <div className="td-blog-postbox-right-sidebar">
-         <div className="td-blog-postbox-right-form td-faq-main-form mb-60">
-            <form onClick={(e) => e.preventDefault()} className="p-relative">
-               <input className="inputs" type="text" placeholder="Search product" />
-               <button className="td-faq-main-btn" type="submit">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M9.8889 15.2222C5.96154 15.2222 2.7778 12.0385 2.7778 8.1111C2.7778 4.18375 5.96154 1 9.8889 1C13.8163 1 17 4.18375 17 8.1111C17 12.0385 13.8163 15.2222 9.8889 15.2222Z" stroke="#1C1D1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                     <path d="M1.00053 17.0001L4.86719 13.1334" stroke="#1C1D1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-               </button>
-            </form>
-         </div>
          <div className="td-blog-postbox-user-profile text-center mb-60">
             <div className="td-blog-postbox-user-thumb mb-20">
                <img src="/assets/img/blog/sidebar/right/avatar.png" alt="" />

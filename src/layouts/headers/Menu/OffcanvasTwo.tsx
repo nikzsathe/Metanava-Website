@@ -15,12 +15,6 @@ const OffcanvasTwo = ({ offCanvas, setOffCanvas }: MobileSidebarProps) => {
                <div className="nav-logo">
                   <Link to="/"><img data-width="96" src="/assets/img/logo/logo-black.png" alt="logo" /></Link>
                </div>
-               <div className="tdmobile__search">
-                  <form onSubmit={(e) => e.preventDefault()}>
-                     <input type="text" placeholder="Search here..." />
-                     <button><i className="fas fa-search"></i></button>
-                  </form>
-               </div>
                <div className="offCanvas__side-info mb-30 ml-25 mr-25">
                   <div className="contact-list mb-30">
                      <h4>Office Address</h4>
