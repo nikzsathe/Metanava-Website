@@ -1,6 +1,5 @@
 import InnerHeader from "../../../layouts/headers/InnerHeader";
 import FooterOne from "../../../layouts/footers/FooterOne";
-import Cta from "../../common/Cta";
 import CareerHero from "./Hero";
 import OpenPositions from "./OpenPositions";
 import Benefits from "./Benefits";
@@ -15,7 +14,6 @@ const CareerPage = () => {
                   <CareerHero />
                   <OpenPositions />
                   <Benefits />
-                  <Cta />
                </main>
                <FooterOne style={false} />
             </div>

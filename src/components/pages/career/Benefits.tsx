@@ -2,7 +2,7 @@ import { benefits } from "../../../data/CareerData";
 
 const Benefits = () => {
    return (
-      <section className="td-process-area pt-80 pb-60 grey-bg-2">
+      <section className="td-process-area pt-60 pb-60 grey-bg-2">
          <div className="container">
             <div className="row justify-content-center mb-40">
                <div className="col-lg-8 text-center">

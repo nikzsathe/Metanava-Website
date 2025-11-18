@@ -97,11 +97,403 @@ body {
   border-radius: 18px;
   background: #ffffff;
   box-shadow: 0 20px 45px rgba(5, 12, 34, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 25px 50px rgba(5, 12, 34, 0.1);
+  }
+}
+
+/* New Career Card Design */
+.career-card-new {
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(5, 12, 34, 0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--td-theme-primary) 0%, #5cc4cc 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(92, 196, 204, 0.02) 0%, rgba(92, 196, 204, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(92, 196, 204, 0.15), 0 0 0 1px rgba(92, 196, 204, 0.1);
+    border-color: rgba(92, 196, 204, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fcfd 100%);
+    
+    &::before {
+      opacity: 1;
+    }
+    
+    &::after {
+      opacity: 1;
+    }
+    
+    .career-badge {
+      background: rgba(92, 196, 204, 0.2);
+      border-color: rgba(92, 196, 204, 0.4);
+      transform: translateY(-1px);
+    }
+    
+    .career-title {
+      color: var(--td-theme-primary);
+    }
+    
+    .career-apply-btn {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(92, 196, 204, 0.35);
+    }
+  }
+  
+  @media (max-width: 991px) {
+    padding: 28px !important;
+    border-radius: 18px;
+  }
+  
+  @media (max-width: 767px) {
+    padding: 24px !important;
+    border-radius: 16px;
+  }
+}
+
+.career-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--td-theme-primary);
+  background: rgba(92, 196, 204, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(92, 196, 204, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.career-divider {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.career-type {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.career-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1c1d1f;
+  margin: 0;
+  letter-spacing: -0.015em;
+  transition: color 0.35s ease;
+  position: relative;
+  z-index: 1;
+  
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+}
+
+.career-summary {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.65);
+  position: relative;
+  z-index: 1;
+  
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.career-apply-btn {
+  white-space: nowrap;
+  min-width: 140px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  
+  @media (max-width: 991px) {
+    width: 100%;
+    min-width: auto;
+    margin-top: 16px;
+  }
+}
+
+/* CTA Section Spacing Fix */
+.td-cta-area {
+  margin-bottom: 60px;
+  
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+  
+  &.td-cta-career-spacing {
+    margin-bottom: 120px !important;
+    padding-bottom: 0 !important;
+    
+    @media (max-width: 991px) {
+      margin-bottom: 100px !important;
+    }
+    
+    @media (max-width: 767px) {
+      margin-bottom: 80px !important;
+    }
+  }
+  
+  .td-cta-wrap {
+    @media (max-width: 991px) {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+    
+    @media (max-width: 767px) {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+    }
+  }
 }
 
 .career-hero-thumb img {
   min-height: 340px;
   object-fit: cover;
+}
+
+/* Career Form Modal */
+.career-form-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(4px);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 999999 !important;
+  padding: 20px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+  margin: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  
+  body.has-modal-open & {
+    overflow: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.career-form-modal {
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.career-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+  border-radius: 18px 18px 0 0;
+  
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #1c1d1f;
+  }
+}
+
+.career-form-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  color: #1c1d1f;
+  font-size: 18px;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.12);
+  }
+}
+
+.career-form-content {
+  padding: 32px;
+}
+
+.career-form-content label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1c1d1f;
+  
+  .required {
+    color: #e74c3c;
+  }
+}
+
+.career-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.career-form-note {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  
+  a {
+    color: var(--td-theme-primary);
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.form_error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.career-form-content small.text-muted {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.career-form-content .td-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--td-theme-primary);
+  }
+  
+  &[type="file"] {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .career-form-modal {
+    max-width: 100%;
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+  
+  .career-form-header {
+    padding: 20px;
+    
+    h3 {
+      font-size: 20px;
+    }
+  }
+  
+  .career-form-content {
+    padding: 20px;
+  }
 }
 
 .cookie-banner {
