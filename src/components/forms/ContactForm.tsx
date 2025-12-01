@@ -67,15 +67,17 @@ const ContactForm = () => {
          // Netlify Forms - encode form data as URL-encoded string
          const formData = new URLSearchParams();
          formData.append('form-name', 'contact');
-         formData.append('full_name', data.full_name);
-         formData.append('work_email', data.work_email);
-         formData.append('company_name', data.company_name);
-         formData.append('phone_number', data.phone_number);
-         formData.append('website_url', data.website_url);
-         formData.append('job_title', data.job_title);
-         formData.append('service_interest', data.service_interest);
-         formData.append('monthly_budget', data.monthly_budget);
-         formData.append('message', data.message);
+         formData.append('full_name', data.full_name || '');
+         formData.append('work_email', data.work_email || '');
+         formData.append('company_name', data.company_name || '');
+         formData.append('phone_number', data.phone_number || '');
+         formData.append('website_url', data.website_url || '');
+         formData.append('job_title', data.job_title || '');
+         formData.append('service_interest', data.service_interest || '');
+         formData.append('monthly_budget', data.monthly_budget || '');
+         formData.append('message', data.message || '');
+
+         console.log('Submitting form data:', formData.toString());
 
          // Submit to Netlify Forms
          const response = await fetch('/', {
@@ -84,20 +86,29 @@ const ContactForm = () => {
             body: formData.toString(),
          });
 
+         console.log('Response status:', response.status);
+         console.log('Response ok:', response.ok);
+
          if (response.ok) {
+            const responseText = await response.text();
+            console.log('Response text:', responseText);
+            
             toast.success('Message sent successfully! We\'ll get back to you soon.', { 
                position: 'top-center',
                autoClose: 5000
             });
             reset();
          } else {
-            throw new Error('Form submission failed');
+            const errorText = await response.text();
+            console.error('Error response:', errorText);
+            throw new Error(`Form submission failed: ${response.status} ${response.statusText}`);
          }
-      } catch (error) {
+      } catch (error: any) {
          console.error('Error submitting form:', error);
-         toast.error('Failed to send message. Please try again or contact us directly.', { 
+         const errorMessage = error.message || 'Unknown error occurred';
+         toast.error(`Failed to send message: ${errorMessage}. Please try again or contact us directly.`, { 
             position: 'top-center',
-            autoClose: 5000
+            autoClose: 7000
          });
       } finally {
          setIsSubmitting(false);
@@ -108,12 +119,14 @@ const ContactForm = () => {
       <form 
          name="contact" 
          method="POST" 
+         action="/"
          data-netlify="true" 
          netlify-honeypot="bot-field"
          onSubmit={handleSubmit(onSubmit)}
       >
          {/* Hidden field for Netlify */}
          <input type="hidden" name="form-name" value="contact" />
+         <input type="hidden" name="bot-field" />
          <p style={{ display: 'none' }}>
             <label>
                Don't fill this out if you're human: <input name="bot-field" />

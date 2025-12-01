@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+    <!-- Hidden form for Netlify Forms detection -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="full_name" />
+        <input type="email" name="work_email" />
+        <input type="text" name="company_name" />
+        <input type="tel" name="phone_number" />
+        <input type="url" name="website_url" />
+        <input type="text" name="job_title" />
+        <select name="service_interest">
+            <option value="">Select a service</option>
+            <option value="B2B Lead Generation">B2B Lead Generation</option>
+            <option value="Demand Generation">Demand Generation</option>
+            <option value="Account-Based Marketing">Account-Based Marketing</option>
+            <option value="Content Syndication">Content Syndication</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Email Marketing">Email Marketing</option>
+            <option value="Other">Other</option>
+        </select>
+        <select name="monthly_budget">
+            <option value="">Select budget range</option>
+            <option value="Under $5,000">Under $5,000</option>
+            <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+            <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+            <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+            <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+            <option value="Over $100,000">Over $100,000</option>
+        </select>
+        <textarea name="message"></textarea>
+        <input type="text" name="bot-field" />
+    </form>
+</body>
+</html>
+
