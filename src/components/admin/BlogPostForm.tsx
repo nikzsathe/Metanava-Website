@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { createBlogPost, updateBlogPost, generateSlug, type BlogPostFormData, type BlogPost } from '../../services/blogService';
+import { uploadImage } from '../../services/storageService';
 
 interface BlogPostFormProps {
   existingPost?: BlogPost;
@@ -28,12 +29,20 @@ const schema = yup.object({
 const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [autoGenerateSlug, setAutoGenerateSlug] = useState(true);
+  const [uploadingThumb, setUploadingThumb] = useState(false);
+  const [uploadingFeatured, setUploadingFeatured] = useState(false);
+  const [uploadingAuthor, setUploadingAuthor] = useState(false);
+  
+  // Always show upload buttons - handle errors gracefully
+  // If Supabase isn't configured, user will see helpful error message
+  const showUploadButtons = true;
 
   const {
     register,
     handleSubmit,
     reset,
     setValue,
+    watch,
     formState: { errors },
   } = useForm<BlogPostFormData & { published: boolean }>({
     resolver: yupResolver(schema) as any,
@@ -147,9 +156,73 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
 
         <div className="col-md-6 mb-25">
           <label htmlFor="thumb">
-            Thumbnail URL <span className="required">*</span>
+            Thumbnail {showUploadButtons ? 'Image' : 'URL'} <span className="required">*</span>
           </label>
-          <input {...register('thumb')} className="td-input" id="thumb" type="url" />
+          {showUploadButtons ? (
+            <div className="image-upload-wrapper">
+              <div className="image-upload-area">
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="thumb-file"
+                  className="image-upload-input"
+                  onChange={async (e) => {
+                  const file = e.target.files?.[0];
+                  if (file) {
+                    setUploadingThumb(true);
+                    try {
+                      const url = await uploadImage(file);
+                      setValue('thumb', url);
+                      toast.success('Thumbnail uploaded successfully!', { position: 'top-center' });
+                    } catch (error: any) {
+                      const errorMsg = error.message || 'Failed to upload thumbnail';
+                      toast.error(
+                        errorMsg.includes('not configured') 
+                          ? 'Supabase Storage not configured. Please set up storage bucket first. See SUPABASE_STORAGE_SETUP.md' 
+                          : errorMsg, 
+                        { position: 'top-center', autoClose: 5000 }
+                      );
+                    } finally {
+                      setUploadingThumb(false);
+                    }
+                  }
+                  }}
+                  disabled={uploadingThumb}
+                />
+                <label htmlFor="thumb-file" className="image-upload-button">
+                  {uploadingThumb ? (
+                    <>
+                      <i className="fa-solid fa-spinner fa-spin"></i>
+                      <span>Uploading...</span>
+                    </>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-cloud-arrow-up"></i>
+                      <span>Upload Image</span>
+                    </>
+                  )}
+                </label>
+              </div>
+              <div className="image-url-input mt-15">
+                <input
+                  {...register('thumb')}
+                  className="td-input"
+                  id="thumb"
+                  type="url"
+                  placeholder="Or paste image URL here"
+                />
+                {watch('thumb') && (
+                  <div className="image-preview mt-15">
+                    <img src={watch('thumb')} alt="Preview" onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            <input {...register('thumb')} className="td-input" id="thumb" type="url" />
+          )}
           <p className="form_error">{errors.thumb?.message}</p>
         </div>
 
@@ -208,8 +281,74 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
         </div>
 
         <div className="col-md-6 mb-25">
-          <label htmlFor="featured_image">Featured Image URL</label>
-          <input {...register('featured_image')} className="td-input" id="featured_image" type="url" />
+          <label htmlFor="featured_image">
+            Featured Image {showUploadButtons ? '(Optional)' : 'URL'}
+          </label>
+          {showUploadButtons ? (
+            <div className="image-upload-wrapper">
+              <div className="image-upload-area">
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="featured-file"
+                  className="image-upload-input"
+                  onChange={async (e) => {
+                  const file = e.target.files?.[0];
+                  if (file) {
+                    setUploadingFeatured(true);
+                    try {
+                      const url = await uploadImage(file);
+                      setValue('featured_image', url);
+                      toast.success('Featured image uploaded successfully!', { position: 'top-center' });
+                    } catch (error: any) {
+                      const errorMsg = error.message || 'Failed to upload featured image';
+                      toast.error(
+                        errorMsg.includes('not configured') 
+                          ? 'Supabase Storage not configured. Please set up storage bucket first.' 
+                          : errorMsg, 
+                        { position: 'top-center', autoClose: 5000 }
+                      );
+                    } finally {
+                      setUploadingFeatured(false);
+                    }
+                  }
+                  }}
+                  disabled={uploadingFeatured}
+                />
+                <label htmlFor="featured-file" className="image-upload-button">
+                  {uploadingFeatured ? (
+                    <>
+                      <i className="fa-solid fa-spinner fa-spin"></i>
+                      <span>Uploading...</span>
+                    </>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-cloud-arrow-up"></i>
+                      <span>Upload Image</span>
+                    </>
+                  )}
+                </label>
+              </div>
+              <div className="image-url-input mt-15">
+                <input
+                  {...register('featured_image')}
+                  className="td-input"
+                  id="featured_image"
+                  type="url"
+                  placeholder="Or paste image URL here"
+                />
+                {watch('featured_image') && (
+                  <div className="image-preview mt-15">
+                    <img src={watch('featured_image')} alt="Preview" onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            <input {...register('featured_image')} className="td-input" id="featured_image" type="url" />
+          )}
           <p className="form_error">{errors.featured_image?.message}</p>
         </div>
 
@@ -219,8 +358,74 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
         </div>
 
         <div className="col-md-6 mb-25">
-          <label htmlFor="author_image">Author Image URL</label>
-          <input {...register('author_image')} className="td-input" id="author_image" type="url" />
+          <label htmlFor="author_image">
+            Author Image {showUploadButtons ? '(Optional)' : 'URL'}
+          </label>
+          {showUploadButtons ? (
+            <div className="image-upload-wrapper">
+              <div className="image-upload-area">
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="author-file"
+                  className="image-upload-input"
+                  onChange={async (e) => {
+                  const file = e.target.files?.[0];
+                  if (file) {
+                    setUploadingAuthor(true);
+                    try {
+                      const url = await uploadImage(file);
+                      setValue('author_image', url);
+                      toast.success('Author image uploaded successfully!', { position: 'top-center' });
+                    } catch (error: any) {
+                      const errorMsg = error.message || 'Failed to upload author image';
+                      toast.error(
+                        errorMsg.includes('not configured') 
+                          ? 'Supabase Storage not configured. Please set up storage bucket first.' 
+                          : errorMsg, 
+                        { position: 'top-center', autoClose: 5000 }
+                      );
+                    } finally {
+                      setUploadingAuthor(false);
+                    }
+                  }
+                  }}
+                  disabled={uploadingAuthor}
+                />
+                <label htmlFor="author-file" className="image-upload-button">
+                  {uploadingAuthor ? (
+                    <>
+                      <i className="fa-solid fa-spinner fa-spin"></i>
+                      <span>Uploading...</span>
+                    </>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-cloud-arrow-up"></i>
+                      <span>Upload Image</span>
+                    </>
+                  )}
+                </label>
+              </div>
+              <div className="image-url-input mt-15">
+                <input
+                  {...register('author_image')}
+                  className="td-input"
+                  id="author_image"
+                  type="url"
+                  placeholder="Or paste image URL here"
+                />
+                {watch('author_image') && (
+                  <div className="image-preview mt-15">
+                    <img src={watch('author_image')} alt="Preview" onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            <input {...register('author_image')} className="td-input" id="author_image" type="url" />
+          )}
           <p className="form_error">{errors.author_image?.message}</p>
         </div>
 
