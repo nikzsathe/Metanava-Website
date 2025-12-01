@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import BlogPostForm from '../../components/admin/BlogPostForm';
 import { getAllBlogPosts, deleteBlogPost, type BlogPost } from '../../services/blogService';
+import { useAuth } from '../../contexts/AuthContext';
 import InnerHeader from '../../layouts/headers/InnerHeader';
 import FooterOne from '../../layouts/footers/FooterOne';
 
@@ -11,6 +13,16 @@ const BlogAdminMain = () => {
   const [showForm, setShowForm] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | undefined>();
   const [selectedPage, setSelectedPage] = useState<string>('all');
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to logout?')) {
+      logout();
+      toast.success('Logged out successfully', { position: 'top-center' });
+      navigate('/admin/login');
+    }
+  };
 
   useEffect(() => {
     loadPosts();
@@ -101,16 +113,24 @@ const BlogAdminMain = () => {
                             <option value="home_7">Home 7</option>
                           </select>
                           {!showForm && (
-                            <button
-                              className="td-btn td-btn-primary"
-                              onClick={() => {
-                                setShowForm(true);
-                                setEditingPost(undefined);
-                                window.scrollTo({ top: 0, behavior: 'smooth' });
-                              }}
-                            >
-                              + Create New Post
-                            </button>
+                            <>
+                              <button
+                                className="td-btn td-btn-primary"
+                                onClick={() => {
+                                  setShowForm(true);
+                                  setEditingPost(undefined);
+                                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
+                              >
+                                + Create New Post
+                              </button>
+                              <button
+                                className="td-btn td-btn-border"
+                                onClick={handleLogout}
+                              >
+                                Logout
+                              </button>
+                            </>
                           )}
                         </div>
                       </div>

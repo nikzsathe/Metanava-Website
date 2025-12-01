@@ -37,6 +37,8 @@ import CookiesPolicyMain from '../pages/CookiesPolicyMain';
 import CASLPolicyMain from '../pages/CASLPolicyMain';
 import BlogAdminMain from '../pages/admin/BlogAdminMain';
 import BlogDetailsDynamic from '../pages/BlogDetailsDynamic';
+import AdminLoginMain from '../pages/admin/AdminLoginMain';
+import ProtectedRoute from '../components/admin/ProtectedRoute';
 
 const AppNavigation = () => {
    return (
@@ -72,7 +74,15 @@ const AppNavigation = () => {
             <Route path="/blog-sidebar" element={<BlogSidebarMain />} />
             <Route path="/blog-details" element={<BlogDetailsMain />} />
             <Route path="/blog/:slug" element={<BlogDetailsDynamic />} />
-            <Route path="/admin/blog" element={<BlogAdminMain />} />
+            <Route path="/admin/login" element={<AdminLoginMain />} />
+            <Route 
+              path="/admin/blog" 
+              element={
+                <ProtectedRoute>
+                  <BlogAdminMain />
+                </ProtectedRoute>
+              } 
+            />
             <Route path="/contact" element={<ContactMain />} />
             <Route path="/careers" element={<CareerMain />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyMain />} />
