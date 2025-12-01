@@ -14,15 +14,45 @@ interface BlogPostFormProps {
 const schema = yup.object({
   title: yup.string().required('Title is required').min(10, 'Title must be at least 10 characters'),
   slug: yup.string().required('Slug is required'),
-  thumb: yup.string().url('Must be a valid URL').required('Thumbnail URL is required'),
+  thumb: yup
+    .string()
+    .required('Thumbnail is required - please upload an image or enter a URL')
+    .test('is-url-or-uploading', 'Must be a valid URL', function(value) {
+      // Allow empty during upload, but validate URL format if provided
+      if (!value) return false;
+      try {
+        new URL(value);
+        return true;
+      } catch {
+        return false;
+      }
+    }),
   tag: yup.string().required('Tag is required'),
   date: yup.string().required('Date is required'),
   page: yup.string().required('Page is required'),
   excerpt: yup.string(),
   content: yup.string(),
-  featured_image: yup.string().url('Must be a valid URL'),
+  featured_image: yup.string().test('is-url', 'Must be a valid URL', function(value) {
+    // Optional field - only validate if provided
+    if (!value) return true;
+    try {
+      new URL(value);
+      return true;
+    } catch {
+      return false;
+    }
+  }),
   author_name: yup.string(),
-  author_image: yup.string().url('Must be a valid URL'),
+  author_image: yup.string().test('is-url', 'Must be a valid URL', function(value) {
+    // Optional field - only validate if provided
+    if (!value) return true;
+    try {
+      new URL(value);
+      return true;
+    } catch {
+      return false;
+    }
+  }),
   published: yup.boolean(),
 });
 
@@ -172,16 +202,16 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
                     setUploadingThumb(true);
                     try {
                       const url = await uploadImage(file);
-                      setValue('thumb', url);
+                      setValue('thumb', url, { shouldValidate: true });
                       toast.success('Thumbnail uploaded successfully!', { position: 'top-center' });
                     } catch (error: any) {
                       const errorMsg = error.message || 'Failed to upload thumbnail';
-                      toast.error(
-                        errorMsg.includes('not configured') 
-                          ? 'Supabase Storage not configured. Please set up storage bucket first. See SUPABASE_STORAGE_SETUP.md' 
-                          : errorMsg, 
-                        { position: 'top-center', autoClose: 5000 }
-                      );
+                      console.error('Upload error:', error);
+                      toast.error(errorMsg, { 
+                        position: 'top-center', 
+                        autoClose: 7000,
+                        style: { maxWidth: '500px' }
+                      });
                     } finally {
                       setUploadingThumb(false);
                     }
@@ -298,7 +328,7 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
                     setUploadingFeatured(true);
                     try {
                       const url = await uploadImage(file);
-                      setValue('featured_image', url);
+                      setValue('featured_image', url, { shouldValidate: true });
                       toast.success('Featured image uploaded successfully!', { position: 'top-center' });
                     } catch (error: any) {
                       const errorMsg = error.message || 'Failed to upload featured image';
@@ -375,7 +405,7 @@ const BlogPostForm = ({ existingPost, onSuccess }: BlogPostFormProps) => {
                     setUploadingAuthor(true);
                     try {
                       const url = await uploadImage(file);
-                      setValue('author_image', url);
+                      setValue('author_image', url, { shouldValidate: true });
                       toast.success('Author image uploaded successfully!', { position: 'top-center' });
                     } catch (error: any) {
                       const errorMsg = error.message || 'Failed to upload author image';

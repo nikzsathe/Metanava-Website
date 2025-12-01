@@ -17,6 +17,17 @@ export const uploadImage = async (
   }
 
   try {
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      throw new Error('File must be an image');
+    }
+
+    // Check file size (5MB limit)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+      throw new Error('File size must be less than 5MB');
+    }
+
     // Generate unique filename if not provided
     const fileName = path || `${Date.now()}-${Math.random().toString(36).substring(7)}-${file.name}`;
     
@@ -24,6 +35,8 @@ export const uploadImage = async (
     const sanitizedFileName = fileName
       .replace(/[^a-zA-Z0-9.-]/g, '-')
       .replace(/-+/g, '-');
+
+    console.log(`Uploading to bucket: ${BUCKET_NAME}, file: ${sanitizedFileName}`);
 
     // Upload file to Supabase Storage
     const { error } = await supabase.storage
@@ -34,8 +47,18 @@ export const uploadImage = async (
       });
 
     if (error) {
-      console.error('Error uploading image:', error);
-      throw new Error(`Failed to upload image: ${error.message}`);
+      console.error('Supabase Storage error:', error);
+      
+      // Provide helpful error messages
+      if (error.message.includes('Bucket not found') || error.message.includes('does not exist')) {
+        throw new Error(`Storage bucket '${BUCKET_NAME}' not found. Please create it in Supabase Dashboard → Storage.`);
+      } else if (error.message.includes('new row violates row-level security')) {
+        throw new Error('Permission denied. Please check Storage policies in Supabase Dashboard.');
+      } else if (error.message.includes('duplicate')) {
+        throw new Error('File with this name already exists. Please rename the file.');
+      }
+      
+      throw new Error(`Upload failed: ${error.message}`);
     }
 
     // Get public URL
@@ -43,6 +66,7 @@ export const uploadImage = async (
       .from(BUCKET_NAME)
       .getPublicUrl(sanitizedFileName);
 
+    console.log('Upload successful, URL:', urlData.publicUrl);
     return urlData.publicUrl;
   } catch (error: any) {
     console.error('Error in uploadImage:', error);
