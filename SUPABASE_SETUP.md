@@ -4,12 +4,15 @@ This guide will help you set up Supabase for managing blog posts on your Netlify
 
 ## Step 1: Create a Supabase Account and Project
 
+
+WYt2@*tpUNnbR@h
+
 1. Go to [https://supabase.com](https://supabase.com)
 2. Sign up for a free account
 3. Click "New Project"
 4. Fill in:
    - **Name**: Metanova Tech Blog (or your preferred name)
-   - **Database Password**: Create a strong password (save this!)
+   - **Database Password**: Create a strong password (save this!) WYt2@*tpUNnbR@h
    - **Region**: Choose closest to your users
 5. Click "Create new project" and wait 2-3 minutes for setup
 
@@ -84,10 +87,16 @@ INSERT INTO blog_posts (title, slug, thumb, tag, date, page, excerpt, published)
 ## Step 3: Get Your API Credentials
 
 1. Go to **Settings** (gear icon) → **API**
-2. You'll need:
-   - **Project URL** (found under "Project URL")
-   - **anon/public key** (found under "Project API keys" → "anon public")
-   - **service_role key** (found under "Project API keys" → "service_role" - **KEEP THIS SECRET!**)
+2. Click on the **"Legacy anon, service_role API keys"** tab (not the "Publishable and secret API keys" tab)
+3. You'll need:
+   - **Project URL** - Found at the top under "Project URL"
+     - Example: `https://xxxxxxxxxxxxx.supabase.co`
+   - **anon public key** - Found under "Project API keys" → **"anon public"**
+     - This is the key you'll use for your frontend React app
+     - ✅ **USE THIS ONE** - Safe to expose in client-side code
+   - **service_role key** (Optional, for admin functions only)
+     - ⚠️ **KEEP THIS SECRET!** Never expose this in client-side code
+     - Only use this in serverless functions or backend services
 
 ## Step 4: Set Up Environment Variables
 
@@ -100,9 +109,12 @@ VITE_SUPABASE_ANON_KEY=your_anon_key_here
 ```
 
 **Important**: 
+- ✅ Use the **anon public key** (NOT the service_role key)
+- The anon key is safe to use in client-side React code
 - Never commit the `.env` file to Git if it contains secrets
 - The `.env` file should already be in `.gitignore`
 - For Netlify, you'll need to add these as environment variables in the Netlify dashboard
+- ⚠️ **NEVER** use the service_role key in your React app - it bypasses all security!
 
 ## Step 5: Configure Netlify Environment Variables
 

@@ -25,7 +25,7 @@
   </url>
   
   <url>
-    <loc>https://metanovatech.com//service</loc>
+    <loc>https://metanovatech.com/service</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -33,42 +33,42 @@
   
   <!-- Service Pages -->
   <url>
-    <loc>https://metanovatech.com//services/b2b-lead-generation</loc>
+    <loc>https://metanovatech.com/services/b2b-lead-generation</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//services/demand-generation</loc>
+    <loc>https://metanovatech.com/services/demand-generation</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//services/account-based-marketing</loc>
+    <loc>https://metanovatech.com/services/account-based-marketing</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//services/content-syndication</loc>
+    <loc>https://metanovatech.com/services/content-syndication</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//services/digital-marketing</loc>
+    <loc>https://metanovatech.com/services/digital-marketing</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//services/email-marketing</loc>
+    <loc>https://metanovatech.com/services/email-marketing</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,14 +76,14 @@
   
   <!-- Blog Pages -->
   <url>
-    <loc>https://metanovatech.com//blog</loc>
+    <loc>https://metanovatech.com/blog</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//blog-sidebar</loc>
+    <loc>https://metanovatech.com/blog-sidebar</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -91,7 +91,7 @@
   
   <!-- Career Page -->
   <url>
-    <loc>https://metanovatech.com//careers</loc>
+    <loc>https://metanovatech.com/careers</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -99,7 +99,7 @@
   
   <!-- Contact Page -->
   <url>
-    <loc>https://metanovatech.com//contact</loc>
+    <loc>https://metanovatech.com/contact</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -107,28 +107,28 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://metanovatech.com//privacy-policy</loc>
+    <loc>https://metanovatech.com/privacy-policy</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//terms-and-conditions</loc>
+    <loc>https://metanovatech.com/terms-and-conditions</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//cookies-policy</loc>
+    <loc>https://metanovatech.com/cookies-policy</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://metanovatech.com//casl-policy</loc>
+    <loc>https://metanovatech.com/casl-policy</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -136,7 +136,7 @@
   
   <!-- FAQ Page -->
   <url>
-    <loc>https://metanovatech.com//faq</loc>
+    <loc>https://metanovatech.com/faq</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -144,7 +144,7 @@
   
   <!-- Team Page -->
   <url>
-    <loc>https://metanovatech.com//team</loc>
+    <loc>https://metanovatech.com/team</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
