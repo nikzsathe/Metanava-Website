@@ -10,9 +10,7 @@ const Cta = () => {
                   <h2 className="title p-relative d-inline-block">
                      <img className="td-cta-shape-2 d-none d-md-block" src="/assets/img/cta/cta-2.png" alt="" />
                      <Link className="td-text-invert" to="/contact">
-                        READY TO<br />
-                        UNLOCK MORE<br />
-                        PIPELINE?
+                        READY TO UNLOCK MORE PIPELINE?
                      </Link>
                   </h2>
                   <p className="mt-35 td-text-invert">Let’s collaborate on your next B2B demand playbook.</p>

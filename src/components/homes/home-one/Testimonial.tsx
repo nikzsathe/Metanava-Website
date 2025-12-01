@@ -88,13 +88,12 @@ const Testimonial = () => {
                   <div className="td-testimonial-left mb-40 wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
                      <span className="td-section-subtitle mb-185 d-inline-block">CUSTOMER EVIDENCE</span>
                      <img className="mb-20" src="/assets/img/testimonial/user.png" alt="" />
-                     <p>Pipeline-positive programs for<br />
-                        enterprise tech brands worldwide</p>
+                     <p>Pipeline-positive programs for enterprise tech brands worldwide</p>
                   </div>
                </div>
                <div className="col-lg-9 col-md-8">
                   <div className="td-testimonial-content ml-80 mb-50 wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
-                     <h2 className="td-testimonial-title mb-65 td-text-invert">What Our Clients<br /> <span>Say About Pipeline</span></h2>
+                     <h2 className="td-testimonial-title mb-65 td-text-invert">What Our Clients <span>Say About Pipeline</span></h2>
                      <div className="row">
                         <div className="col-lg-4">
                            <div className="td-testimonial-thumb mb-40">

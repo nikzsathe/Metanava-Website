@@ -65,7 +65,7 @@ const Project = () => {
                <div className="col-lg-12">
                   <div className="td-project-title text-center pb-80 td-fixed-title z-index-m-1" ref={pinRef}>
                      <span className="subtitle d-inline-block mb-15">RECENT REVENUE IMPACT</span>
-                     <h2 className="title">Programs that<br /><span>Move the Needle</span></h2>
+                     <h2 className="title">Programs that <span>Move the Needle</span></h2>
                   </div>
                </div>
                {project_data.map((item) => (

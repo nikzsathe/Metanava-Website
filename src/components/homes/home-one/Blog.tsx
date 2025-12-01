@@ -16,7 +16,7 @@ const Blog = () => {
           </div>
           <div className="col-lg-5">
             <div>
-              <h2 className="td-testimonial-title mb-30 td-text-invert">News from <br /> <span>Metanova Tech</span></h2>
+                     <h2 className="td-testimonial-title mb-30 td-text-invert">News from <span>Metanova Tech</span></h2>
             </div>
           </div>
           <div className="col-lg-4">

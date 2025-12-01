@@ -7,8 +7,7 @@ const ContactArea = () => {
             <div className="row">
                <div className="col-lg-5">
                   <div className="td-contact-title-wrap mb-30  wow fadeInLeft" data-wow-delay=".5s" data-wow-duration="1s">
-                     <h2 className="td-contact-main-title">Share your goals<br />
-                        and we’ll build the <span>pipeline plan</span></h2>
+                     <h2 className="td-contact-main-title">Share your goals and we'll build the <span>pipeline plan</span></h2>
                   </div>
                </div>
                <div className="col-lg-7">

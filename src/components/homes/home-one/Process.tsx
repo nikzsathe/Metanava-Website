@@ -12,25 +12,25 @@ const process_list: DataType[] = [
    {
       id: 1,
       count: "01",
-      title: (<>Insight & <br /> <span>Audience Intelligence</span></>),
+      title: (<>Insight & <span>Audience Intelligence</span></>),
       list: ["Ideal customer profiling", "Regulatory & data checks", "Intent + technographic mapping"],
    },
    {
       id: 2,
       count: "02",
-      title: (<>Program & <br /> <span>Channel Design</span></>),
+      title: (<>Program & <span>Channel Design</span></>),
       list: ["Offer and content strategy", "Journey + SLA blueprint", "Media and territory mix"],
    },
    {
       id: 3,
       count: "03",
-      title: (<>Activation & <br /> <span>Quality Governance</span></>),
+      title: (<>Activation & <span>Quality Governance</span></>),
       list: ["Multilingual production pods", "QA, BANT & GDPR compliance", "Sales enablement packs"],
    },
    {
       id: 4,
       count: "04",
-      title: (<>Pipeline & <br /> <span>Optimization</span></>),
+      title: (<>Pipeline & <span>Optimization</span></>),
       list: ["Revenue dashboarding", "SQL feedback loops", "Iteration & scale roadmap"],
    },
 ];
@@ -50,8 +50,8 @@ const Process = () => {
             <div className="row">
                <div className="col-12">
                   <div className="td-service-title-wrap pb-10">
-                     <h2 className="td-section-title mb-0 td-text-invert">Working</h2>
-                     <h3 className="td-section-title-capi td-text-invert">Process</h3>
+                     <h2 className="td-section-title mb-0 td-text-invert d-inline-block me-3">Working</h2>
+                     <h3 className="td-section-title-capi td-text-invert d-inline-block">Process</h3>
                   </div>
                </div>
             </div>

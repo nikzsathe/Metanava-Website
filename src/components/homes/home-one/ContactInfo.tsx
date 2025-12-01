@@ -19,7 +19,7 @@ const ContactInfo = () => {
                <div className="col-lg-4 col-md-6">
                   <div className="td-contact-highlight-card mb-30">
                      <h4>Address</h4>
-                     <p className="mb-0">406, Arihant Avenue, Wanowrie,<br /> Pune, Maharashtra 411040</p>
+                     <p className="mb-0">406, Arihant Avenue, Wanowrie, Pune, Maharashtra 411040</p>
                   </div>
                </div>
                <div className="col-lg-4 col-md-6">
