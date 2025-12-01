@@ -6,9 +6,13 @@ const AboutMain = () => {
    return (
       <Wrapper>
          <SEO
-            pageTitle={'About Metanova Tech'}
-            description="Discover Metanova Tech’s mission, vision, and B2B marketing expertise that accelerate enterprise demand, revenue, and customer lifetime value."
+            pageTitle={'About Metanova Tech | B2B Marketing Experts & Technology Marketing Specialists'}
+            description="Learn about Metanova Tech, a leading B2B growth agency founded in 2020. Discover our mission, vision, team expertise, and how we help technology companies build predictable revenue systems through integrated marketing strategies."
             keywords={[
+               'B2B marketing experts',
+               'technology marketing specialists',
+               'B2B growth agency',
+               'marketing strategy consultants',
                'Metanova Tech mission',
                'B2B lead generation expertise',
                'digital marketing vision',

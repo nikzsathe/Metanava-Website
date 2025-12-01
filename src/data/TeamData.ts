@@ -12,29 +12,15 @@ const team_data: DataType[] = [
       id: 1,
       page: "home_4",
       thumb: "/assets/img/team/thumb.jpg",
-      name: "PITTERSON",
-      designation: "Developer"
+      name: "Siddique Inamdar",
+      designation: "CEO"
    },
    {
       id: 2,
       page: "home_4",
       thumb: "/assets/img/team/thumb-2.jpg",
-      name: "JOTIN",
-      designation: "Developer"
-   },
-   {
-      id: 3,
-      page: "home_4",
-      thumb: "/assets/img/team/thumb-3.jpg",
-      name: "DANDU",
-      designation: "Developer"
-   },
-   {
-      id: 4,
-      page: "home_4",
-      thumb: "/assets/img/team/thumb-4.jpg",
-      name: "SAMIR",
-      designation: "Developer"
+      name: "Farishte Ajdar",
+      designation: "Director - Sales and Client Services"
    },
 
    // home_5

@@ -1,0 +1,304 @@
+# Comprehensive Content Writing Prompt for Metanova Tech Website
+
+## Company Context
+Metanova Tech is a B2B growth collective founded in 2020, specializing in helping technology companies succeed through data operations, demand strategy, lead generation, and creative media services. Target clients include SaaS companies, IT services, staffing agencies, consultants, marketing agencies, manufacturing firms, and logistics providers.
+
+## Content Requirements for Cursor AI
+
+Create comprehensive, SEO-optimized website content for Metanova Tech (https://metanovatech.com/) with the following specifications:
+
+### General Guidelines:
+- **Tone**: Professional, confident, results-driven, yet approachable
+- **Style**: Clear, engaging B2B marketing language that emphasizes value and outcomes
+- **SEO Focus**: Naturally incorporate relevant keywords without keyword stuffing
+- **Length**: Each page should be 800-1500 words minimum for optimal SEO
+- **Structure**: Use H1, H2, H3 headings strategically; include bullet points and short paragraphs for readability
+- **CTA Integration**: Include compelling calls-to-action throughout each page
+
+### Primary Keywords to Target:
+- B2B lead generation
+- B2B demand generation
+- Technology marketing agency
+- B2B growth strategy
+- Account-based marketing services
+- B2B content syndication
+- SaaS marketing services
+- B2B digital marketing
+- Email marketing for B2B
+
+---
+
+## Page-by-Page Content Requirements:
+
+### 1. HOMEPAGE (1200-1500 words)
+
+**Structure:**
+- Hero section with compelling headline and subheadline
+- Value proposition section (What makes Metanova Tech unique)
+- Services overview (brief intro to each service)
+- Client types we serve
+- Results/statistics section (if available)
+- Why choose us section
+- Social proof/testimonials placeholder
+- Final CTA section
+
+**Key Elements to Include:**
+- Opening statement about empowering B2B technology brands
+- Mention "winning the buying moment" concept
+- Emphasize data-driven approach + creative execution
+- Highlight integrated services (data operations, demand strategy, lead generation, creative media)
+- Industry expertise since 2020
+- Target audience breadth (SaaS, IT services, staffing, consultants, etc.)
+- Trust indicators and differentiators
+
+**SEO Keywords**: B2B marketing agency, technology brand growth, B2B lead generation, demand generation services, B2B growth collective
+
+---
+
+### 2. ABOUT US PAGE (1000-1200 words)
+
+**Structure:**
+- Company origin story (founded 2020, identified market gap)
+- Mission and vision statements
+- Our approach/methodology
+- Team expertise and culture
+- Core values
+- Industries we serve (detailed)
+- Our commitment to clients
+
+**Key Elements to Include:**
+- Founder's vision for comprehensive B2B growth solution
+- Team composition (data analysts, marketing strategists, creative experts)
+- Philosophy on meaningful client connections
+- Staying ahead of industry trends
+- Success metrics beyond just revenue
+- Partnership approach
+- Future vision
+
+**SEO Keywords**: B2B marketing experts, technology marketing specialists, B2B growth agency, marketing strategy consultants
+
+---
+
+### 3. SERVICES PAGES
+
+#### Service 1: B2B LEAD GENERATION (900-1200 words)
+
+**Structure:**
+- Service definition and importance
+- How our lead generation works
+- Our unique approach/methodology
+- Types of leads we generate
+- Lead qualification process
+- Technology and tools we use
+- Industries served
+- Expected outcomes/benefits
+- Case study or success metrics
+- Process timeline
+- CTA for consultation
+
+**Key Elements:**
+- Multi-channel lead generation strategies
+- Quality over quantity focus
+- Integration with sales processes
+- Lead scoring and nurturing
+- Data accuracy and compliance
+- Measurable ROI
+
+**SEO Keywords**: B2B lead generation services, qualified leads for technology companies, sales pipeline growth, lead generation agency
+
+---
+
+#### Service 2: DEMAND GENERATION (900-1200 words)
+
+**Structure:**
+- What is demand generation vs. lead generation
+- Full-funnel approach explanation
+- Our demand generation strategy
+- Channels and tactics we use
+- Content strategy integration
+- Brand awareness building
+- Nurturing programs
+- Marketing automation
+- Metrics and KPIs we track
+- Success indicators
+- CTA
+
+**Key Elements:**
+- Awareness to conversion journey
+- Multi-touch attribution
+- Content marketing integration
+- SEO and organic demand
+- Paid media strategies
+- Marketing qualified leads (MQL) development
+- Sales alignment
+
+**SEO Keywords**: B2B demand generation, demand gen strategy, full-funnel marketing, B2B pipeline development, marketing qualified leads
+
+---
+
+#### Service 3: ACCOUNT-BASED MARKETING (900-1200 words)
+
+**Structure:**
+- ABM definition and benefits
+- Why ABM for technology companies
+- Our ABM framework
+- Account selection and research
+- Personalization strategies
+- Multi-channel ABM tactics
+- Sales and marketing alignment
+- Technology stack for ABM
+- Measurement and optimization
+- Ideal client profile for ABM
+- CTA
+
+**Key Elements:**
+- Target account identification
+- Decision-maker mapping
+- Personalized content and campaigns
+- Account-specific insights
+- Coordinated touches across channels
+- Sales enablement
+- Pipeline acceleration
+- Enterprise vs. mid-market ABM approaches
+
+**SEO Keywords**: account-based marketing services, ABM strategy, targeted account marketing, enterprise marketing solutions, B2B ABM agency
+
+---
+
+#### Service 4: CONTENT SYNDICATION (900-1200 words)
+
+**Structure:**
+- Content syndication explained
+- Benefits for B2B technology brands
+- Our syndication network
+- Content types we syndicate
+- Targeting and distribution strategy
+- Lead capture and qualification
+- Performance tracking
+- Content creation vs. syndication
+- Best practices
+- ROI expectations
+- CTA
+
+**Key Elements:**
+- Third-party publisher networks
+- Content amplification strategy
+- Gated vs. ungated content
+- Lead verification process
+- Geographic and demographic targeting
+- Integration with demand gen programs
+- Content performance analytics
+
+**SEO Keywords**: B2B content syndication, content distribution services, lead generation through content, thought leadership distribution
+
+---
+
+#### Service 5: DIGITAL MARKETING (900-1200 words)
+
+**Structure:**
+- Comprehensive digital marketing overview
+- Channels we manage (PPC, social, display, SEO, etc.)
+- Our integrated approach
+- Campaign strategy and planning
+- Creative development
+- Landing page optimization
+- A/B testing methodology
+- Analytics and reporting
+- Budget optimization
+- Continuous improvement process
+- CTA
+
+**Key Elements:**
+- Google Ads and LinkedIn Ads expertise
+- Programmatic advertising
+- Retargeting strategies
+- SEO for B2B technology
+- Social media marketing (LinkedIn focus)
+- Marketing technology integration
+- Data-driven optimization
+- ROI-focused campaigns
+
+**SEO Keywords**: B2B digital marketing agency, PPC for B2B, LinkedIn advertising, technology company marketing, digital demand generation
+
+---
+
+#### Service 6: EMAIL MARKETING (900-1200 words)
+
+**Structure:**
+- Email marketing importance in B2B
+- Our email marketing services
+- Strategy and segmentation
+- Email design and copywriting
+- Automation and workflows
+- Lead nurturing sequences
+- A/B testing approach
+- Deliverability best practices
+- Compliance (GDPR, CAN-SPAM)
+- Analytics and optimization
+- Integration with CRM and marketing automation
+- CTA
+
+**Key Elements:**
+- Persona-based email campaigns
+- Drip campaign development
+- Triggered email sequences
+- Newsletter strategy
+- Event promotion emails
+- Re-engagement campaigns
+- Mobile optimization
+- Email deliverability management
+- List growth strategies
+
+**SEO Keywords**: B2B email marketing services, email campaign management, marketing automation, lead nurturing emails, email marketing agency
+
+---
+
+## Additional Content Elements to Include Across All Pages:
+
+1. **Internal Linking Strategy**: Link between related service pages and to relevant blog posts
+2. **Schema Markup Recommendations**: Service schema, Organization schema, FAQ schema where applicable
+3. **Meta Descriptions**: Compelling 150-160 character descriptions for each page
+4. **FAQ Sections**: Include 5-7 relevant FAQs per service page for SEO
+5. **Related Resources**: Suggest related content, case studies, or guides
+6. **Trust Signals**: Industry certifications, partnerships, client logos (placeholder sections)
+7. **CTA Variations**: Multiple CTA options (consultation, audit, guide download, etc.)
+
+---
+
+## SEO Optimization Instructions:
+
+- Target 1-2 primary keywords per page, 3-5 secondary keywords
+- Keyword density: 1-2% (natural integration)
+- Include long-tail keywords in H2 and H3 headings
+- Use semantic keywords and related terms throughout
+- Optimize for featured snippets with clear, concise answers
+- Include statistics and data points where relevant
+- Write for humans first, search engines second
+- Use active voice and power words
+- Keep paragraphs under 4 lines for readability
+- Include transition words for flow
+
+---
+
+## Voice and Messaging Guidelines:
+
+**DO:**
+- Emphasize outcomes and results
+- Use confident, authoritative language
+- Show expertise without being arrogant
+- Include specific examples and methodologies
+- Address pain points directly
+- Demonstrate understanding of B2B tech challenges
+- Use industry terminology appropriately
+- Create urgency without being pushy
+
+**DON'T:**
+- Use generic marketing jargon excessively
+- Make unrealistic promises
+- Compare negatively to competitors
+- Use overly technical language that alienates
+- Create walls of text without breaks
+- Forget mobile readers
+- Neglect the human element
+
+---

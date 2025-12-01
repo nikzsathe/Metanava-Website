@@ -17,7 +17,7 @@ const HeaderOne = () => {
                      <div className="col-lg-4 col-md-4 col-sm-4 col-5">
                         <div className="tdmenu__wrap">
                            <div onClick={() => setOffCanvas(true)} className="tdmenu-offcanvas-open-btn mobile-nav-toggler d-flex align-items-center justify-content-center">
-                              <span className="text mr-5">menu</span>
+                              <span className="text mr-5 d-none d-md-inline-block">menu</span>
                               <div onClick={() => setOffCanvas(true)} className="tdmenu-offcanvas-open-bar">
                                  <span></span>
                                  <span></span>
@@ -27,7 +27,9 @@ const HeaderOne = () => {
                      </div>
                      <div className="col-lg-4 col-md-4 col-sm-4 col-5">
                         <div className="logo text-center">
-                           <Link className="logo-1" to="/"><img data-width="96" src="/assets/img/logo/logo-black.png" alt="Logo" /></Link>
+                           <Link className="logo-1" to="/">
+                              <img className="header-logo-responsive" data-width="96" src="/assets/img/logo/logo-black.png" alt="Logo" />
+                           </Link>
                         </div>
                      </div>
                      <div className="col-lg-4 col-md-4 col-sm-4 col-2">

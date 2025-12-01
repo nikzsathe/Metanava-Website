@@ -10,14 +10,20 @@ const Team = () => {
    }, []);
 
    return (
-      <div className="td-team-area td-team-about-wrap">
-         <div className="container-fluid">
-            <div className="row">
+      <div className="td-team-area td-team-about-wrap pt-100 pb-100">
+         <div className="container">
+            <div className="row justify-content-center mb-60">
+               <div className="col-lg-8 text-center">
+                  <span className="td-section-subtitle mb-15 d-inline-block">// Our Team</span>
+                  <h2 className="td-section-title td-text-invert">Leadership Team</h2>
+               </div>
+            </div>
+            <div className="row justify-content-center">
                {filteredData.map((item) => (
-                  <div key={item.id} className="col-lg-3 col-md-6 col-sm-6">
+                  <div key={item.id} className="col-lg-6 col-md-6 col-sm-6">
                      <div className="td-team-4-wrap p-relative mb-30">
                         <div className="td-team-4-thumb">
-                           <img className="w-100" src={item.thumb} alt="" />
+                           <img className="w-100" src={item.thumb} alt={item.name} />
                         </div>
                         <div className="td-team-4-content text-center">
                            <span className="td-team-4-subtitle">{item.designation}</span>

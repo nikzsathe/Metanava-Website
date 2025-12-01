@@ -19,6 +19,28 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Responsive logo sizing */
+.header-logo-responsive {
+  transition: all 0.3s ease;
+  
+  @media (max-width: 767px) {
+    width: 140px !important;
+    height: auto !important;
+    max-width: none !important;
+  }
+  
+  @media (max-width: 575px) {
+    width: 120px !important;
+  }
+}
+
+/* Hide menu text on mobile */
+.tdmenu-offcanvas-open-btn .text {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
 .td-service-card {
   flex-direction: column;
   align-items: flex-start;
@@ -743,5 +765,186 @@ body {
   .cookie-banner__preferences ul {
     font-size: 12px;
     line-height: 1.4;
+  }
+}
+
+/* Heroicons Styling for About Page */
+.hero-icon-large {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.hero-icon-medium {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.td-about-approach-item,
+.td-about-values-item,
+.td-about-industries-item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    
+    .hero-icon-medium,
+    svg {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  // Animated border frame on hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+    border-color: var(--td-theme-primary);
+    animation: borderGlow 2s ease-in-out infinite;
+  }
+}
+
+/* Icon containers with background */
+.d-inline-flex[style*="background"] {
+  transition: background 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    background: rgba(92, 196, 204, 0.2) !important;
+    transform: scale(1.05);
+  }
+}
+
+/* Animated frame for sections */
+.td-about-mission-content,
+.td-about-vision-content,
+.td-about-commitment-content {
+  position: relative;
+  padding: 40px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(92, 196, 204, 0.2);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    animation: framePulse 2s ease-in-out infinite;
+  }
+}
+
+/* Animation keyframes */
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(92, 196, 204, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(92, 196, 204, 0.6);
+  }
+}
+
+@keyframes framePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(92, 196, 204, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(92, 196, 204, 0);
+  }
+}
+
+/* Animated gradient background for sections */
+.td-about-mission-area,
+.td-about-vision-area,
+.td-about-approach-area,
+.td-about-values-area,
+.td-about-industries-area,
+.td-about-commitment-area {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(92, 196, 204, 0.03) 0%, transparent 70%);
+    animation: rotateGradient 20s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade-in animation for animate-item */
+.animate-item {
+  opacity: 1; // Default to visible, animations will handle initial state
+  transform: translateY(30px) scale(0.9);
+  
+  // If animations fail, ensure content is visible
+  @supports not (animation: none) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Enhanced hover effects */
+.td-about-approach-item,
+.td-about-values-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 40px rgba(92, 196, 204, 0.15);
+  }
+}
+
+.td-about-industries-item {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 20px rgba(92, 196, 204, 0.1);
   }
 }

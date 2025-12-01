@@ -1,4 +1,10 @@
 import AboutArea from "./AboutArea"
+import Mission from "./Mission"
+import Vision from "./Vision"
+import Approach from "./Approach"
+import Values from "./Values"
+import Industries from "./Industries"
+import Commitment from "./Commitment"
 import Feature from "./Feature"
 import Team from "./Team"
 import Awards from "./Awards"
@@ -14,6 +20,12 @@ const About = () => {
             <div id="smooth-content">
                <main>
                   <AboutArea />
+                  <Mission />
+                  <Vision />
+                  <Approach />
+                  <Values />
+                  <Industries />
+                  <Commitment />
                   <Testimonial />
                   <Feature />
                   <Team />

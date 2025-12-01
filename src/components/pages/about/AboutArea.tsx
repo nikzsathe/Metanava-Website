@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom"
-
 const AboutArea = () => {
    return (
-      <div className="td-about-area td-about-main-spacing pb-140">
+      <div className="td-about-area td-about-main-spacing pb-100">
          <div className="container">
             <div className="row">
                <div className="col-lg-12">
@@ -20,7 +18,7 @@ const AboutArea = () => {
                </div>
                <div className="col-lg-7">
                   <div className="td-about-main-content ml-110 mb-40  wow fadeInRight" data-wow-delay=".5s" data-wow-duration="1s">
-                     <h3 className="td-about-main-title mb-20">Mission, vision & value</h3>
+                     <h3 className="td-about-main-title mb-20">Our Story: Building the Most Trusted B2B Growth Collective</h3>
                      <div className="row">
                         <div className="col-lg-5 col-md-5">
                            <div className="td-about-main-bigtext">
@@ -31,25 +29,11 @@ const AboutArea = () => {
                         <div className="col-lg-7 col-md-7">
                            <div className="td-about-main-text mt-30">
                               <p className="mb-15">
-                                 <strong>Mission:</strong> Empower revenue teams with compliant data, agile execution, and transparent reporting so every buyer touchpoint
-                                 accelerates pipeline.
+                                 Founded in 2020, Metanova Tech emerged from a simple yet powerful observation: technology companies were struggling with fragmented marketing approaches. Enterprise brands needed a comprehensive solution that unified data operations, demand strategy, lead generation, and creative media—not disconnected services from multiple vendors.
                               </p>
-                              <p className="mb-15">
-                                 <strong>Vision:</strong> Become the most trusted B2B marketing partner for enterprises that need accountable growth across global markets.
+                              <p className="mb-0">
+                                 Our founders, drawing on 15 years of combined B2B marketing expertise, set out to create a growth collective that delivers integrated, revenue-first programs with transparent accountability. Today, we help technology companies across the globe build predictable revenue pipelines and accelerate growth through our comprehensive, integrated approach.
                               </p>
-                              <p className="mb-30">
-                                 <strong>Value proposition:</strong> Deep specialization in B2B lead generation and digital marketing, strengthened by always-on analytics,
-                                 Martech craftsmanship, and revenue-first accountability.
-                              </p>
-                              <div className="td-btn-group">
-                                 <Link className="td-btn-circle" to="/contact">
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                 </Link>
-                                 <Link className="td-btn-2 td-btn-primary" to="/contact">EXPLORE ENGAGEMENT MODELS</Link>
-                                 <Link className="td-btn-circle" to="/contact">
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                 </Link>
-                              </div>
                            </div>
                         </div>
                      </div>

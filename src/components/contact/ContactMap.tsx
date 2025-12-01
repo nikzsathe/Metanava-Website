@@ -6,7 +6,7 @@ const ContactMap = () => {
                <div className="col-12">
                   <div className="td-contact-map p-relative">
                      <div className="td-contact-map-wrap">
-                        <img className="mb-100" src="/assets/img/logo/logo-white-black.png" alt="" />
+                        <h2 className="mb-100" style={{ fontSize: '32px', fontWeight: '700', color: '#000000', letterSpacing: '2px' }}>Metanova Tech</h2>
                         <h6 className="mb-25">Contact info:</h6>
                         <a href="tel:+918956644751">+91 89566 44751</a>
                         <a className="mb-10" href="mailto:info@metanovatech.com">info@metanovatech.com</a>

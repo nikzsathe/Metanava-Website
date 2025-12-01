@@ -8,10 +8,8 @@ const OpenPositions = () => {
    const [isFormOpen, setIsFormOpen] = useState(false);
 
    const handleApply = (jobId: number) => {
-      console.log('Apply clicked for job:', jobId);
       setSelectedJob(jobId);
       setIsFormOpen(true);
-      console.log('Form should be open:', true);
    };
 
    const handleCloseForm = () => {
