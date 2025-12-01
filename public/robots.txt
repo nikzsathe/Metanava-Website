@@ -1,0 +1,18 @@
+# robots.txt for Metanova Tech
+# IMPORTANT: Replace "yourdomain.com" with your actual website domain!
+
+User-agent: *
+Allow: /
+
+# Disallow admin pages
+Disallow: /admin/
+
+# Disallow error pages
+Disallow: /error
+
+# Sitemap location (replace yourdomain.com with your actual domain)
+Sitemap: https://metanovatech.com//sitemap.xml
+
+# Crawl-delay (optional, remove if not needed)
+# Crawl-delay: 1
+

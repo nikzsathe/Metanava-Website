@@ -35,6 +35,8 @@ import PrivacyPolicyMain from '../pages/PrivacyPolicyMain';
 import TermsConditionsMain from '../pages/TermsConditionsMain';
 import CookiesPolicyMain from '../pages/CookiesPolicyMain';
 import CASLPolicyMain from '../pages/CASLPolicyMain';
+import BlogAdminMain from '../pages/admin/BlogAdminMain';
+import BlogDetailsDynamic from '../pages/BlogDetailsDynamic';
 
 const AppNavigation = () => {
    return (
@@ -69,6 +71,8 @@ const AppNavigation = () => {
             <Route path="/blog" element={<BlogOneMain />} />
             <Route path="/blog-sidebar" element={<BlogSidebarMain />} />
             <Route path="/blog-details" element={<BlogDetailsMain />} />
+            <Route path="/blog/:slug" element={<BlogDetailsDynamic />} />
+            <Route path="/admin/blog" element={<BlogAdminMain />} />
             <Route path="/contact" element={<ContactMain />} />
             <Route path="/careers" element={<CareerMain />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyMain />} />
