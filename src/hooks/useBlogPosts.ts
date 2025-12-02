@@ -96,3 +96,4 @@ const generateSlugFromTitle = (title: string): string => {
     .slice(0, 100); // Limit length
 };
 
+

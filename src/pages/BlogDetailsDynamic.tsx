@@ -180,3 +180,4 @@ const BlogDetailsDynamic = () => {
 
 export default BlogDetailsDynamic;
 
+

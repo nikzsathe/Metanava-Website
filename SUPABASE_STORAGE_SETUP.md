@@ -123,3 +123,4 @@ Use the Supabase client to upload images directly from your admin form.
 - Check MIME type is allowed
 - Ensure upload policies are set correctly
 
+

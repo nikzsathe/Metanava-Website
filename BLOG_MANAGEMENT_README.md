@@ -180,3 +180,4 @@ If Supabase is unavailable, the system will automatically fall back to static da
 - Supabase Discord: https://discord.supabase.com
 - Check `SUPABASE_SETUP.md` for detailed setup instructions
 
+
