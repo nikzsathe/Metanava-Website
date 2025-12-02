@@ -21,43 +21,43 @@ const FooterOne = ({ style }: DataType) => {
                   </div>
                   <div className="col-lg-2 col-md-6 col-sm-6">
                      <div className="td-footer-widget mb-30">
-                        <h3 className="td-footer-title mb-30">Quick Links</h3>
+                        <h3 className="td-footer-title mb-30 text-white">Quick Links</h3>
                         <ul className="td-footer-widget-list">
-                           <li><Link to="/">Home</Link></li>
-                           <li><Link to="/about">About</Link></li>
-                           <li><Link to="/service">Services</Link></li>
-                           <li><Link to="/blog">Insights</Link></li>
-                           <li><Link to="/careers">Careers</Link></li>
-                           <li><Link to="/contact">Contact</Link></li>
+                           <li><Link to="/" className="text-white">Home</Link></li>
+                           <li><Link to="/about" className="text-white">About</Link></li>
+                           <li><Link to="/service" className="text-white">Services</Link></li>
+                           <li><Link to="/blog" className="text-white">Insights</Link></li>
+                           <li><Link to="/careers" className="text-white">Careers</Link></li>
+                           <li><Link to="/contact" className="text-white">Contact</Link></li>
                         </ul>
                      </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
                      <div className="td-footer-widget ml-80 mb-30">
-                        <h3 className="td-footer-title mb-30">Solutions</h3>
+                        <h3 className="td-footer-title mb-30 text-white">Solutions</h3>
                         <ul className="td-footer-widget-list">
-                           <li><Link to="/service?focus=lead-gen">B2B Lead Generation</Link></li>
-                           <li><Link to="/service?focus=abm">Account-Based Marketing</Link></li>
-                           <li><Link to="/service?focus=content">Content Syndication</Link></li>
-                           <li><Link to="/service?focus=digital">Digital & Email Marketing</Link></li>
+                           <li><Link to="/service?focus=lead-gen" className="text-white">B2B Lead Generation</Link></li>
+                           <li><Link to="/service?focus=abm" className="text-white">Account-Based Marketing</Link></li>
+                           <li><Link to="/service?focus=content" className="text-white">Content Syndication</Link></li>
+                           <li><Link to="/service?focus=digital" className="text-white">Digital & Email Marketing</Link></li>
                         </ul>
                      </div>
                   </div>
                   <div className="col-lg-4 col-md-6">
-                     <div className="td-footer-widget mr-30 mb-30">
-                        <h3 className="td-footer-title mb-30">Address</h3>
-                        <p className="td-footer-location mb-20">406, Arihant Avenue, Wanowrie,<br /> Pune, Maharashtra 411040</p>
-                        <a className="d-block mb-10" href="tel:+918956644751">+91 89566 44751</a>
-                        <a className="d-block mb-30" href="mailto:info@metanovatech.com">info@metanovatech.com</a>
-                        <p className="mb-5">Office hours: Mon – Fri, 9:00 am – 8:00 pm IST</p>
+                     <div className="td-footer-widget mr-30 td-footer-address-widget">
+                        <h3 className="td-footer-title mb-30 text-white">Address</h3>
+                        <p className="td-footer-location mb-20 text-white">406, Arihant Avenue, Wanowrie,<br /> Pune, Maharashtra 411040</p>
+                        <a className="d-block mb-10 text-white" href="tel:+918956644751">+91 89566 44751</a>
+                        <a className="d-block mb-30 text-white" href="mailto:info@metanovatech.com">info@metanovatech.com</a>
+                        <p className="mb-5 text-white">Office hours: Mon – Fri, 9:00 am – 8:00 pm IST</p>
                      </div>
                   </div>
                   <div className="col-12">
-                     <div className="td-footer-bottom mt-45">
+                     <div className="td-footer-bottom td-footer-bottom-responsive">
                         <div className="row align-items-center">
                            <div className="col-lg-6 col-md-8">
                               <div className="td-footer-copyright mb-20">
-                                 <p>© {new Date().getFullYear()} Metanova Tech. All Rights Reserved.</p>
+                                 <p className="text-white">© {new Date().getFullYear()} Metanova Tech. All Rights Reserved.</p>
                               </div>
                            </div>
                            <div className="col-lg-6 col-md-4">
@@ -90,13 +90,13 @@ const FooterOne = ({ style }: DataType) => {
                            </div>
                            <div className="col-12">
                               <div className="td-footer-legal-links text-center mt-10">
-                                 <Link to="/privacy-policy">Privacy Policy</Link>
-                                 <span>•</span>
-                                 <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
-                                 <span>•</span>
-                                 <Link to="/cookies-policy">Cookies Policy</Link>
-                                 <span>•</span>
-                                 <Link to="/casl-policy">CASL Compliance</Link>
+                                 <Link to="/privacy-policy" className="text-white">Privacy Policy</Link>
+                                 <span className="text-white">•</span>
+                                 <Link to="/terms-and-conditions" className="text-white">Terms &amp; Conditions</Link>
+                                 <span className="text-white">•</span>
+                                 <Link to="/cookies-policy" className="text-white">Cookies Policy</Link>
+                                 <span className="text-white">•</span>
+                                 <Link to="/casl-policy" className="text-white">CASL Compliance</Link>
                               </div>
                            </div>
                         </div>

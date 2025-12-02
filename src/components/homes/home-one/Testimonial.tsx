@@ -16,8 +16,8 @@ const testi_data: DataType[] = [
       designation: "VP Marketing, SaaS Unicorn",
       desc: (
          <>
-            Metanova Tech feels like an extension of our revenue team. Within one quarter, they doubled our MQL to SQL conversion by bringing
-            cleaner data, multilingual nurture, and a relentless focus on funnel governance.
+            Metanova Tech operates as a seamless extension of our revenue operations. In just one quarter, they transformed our MQL to SQL conversion rate, 
+            delivering superior data quality, cross-language engagement programs, and unwavering dedication to sales funnel management.
          </>
       ),
    },
@@ -27,8 +27,8 @@ const testi_data: DataType[] = [
       designation: "Head of Growth, Cybersecurity ISV",
       desc: (
          <>
-            Their account-based playbooks finally gave sales and marketing one view of the buyer journey. The confirmed callback program alone
-            sourced 38% of pipeline last quarter.
+            Their account-based marketing framework finally unified sales and marketing perspectives on the customer journey. The verified callback initiative 
+            generated 38% of our pipeline during the previous quarter.
          </>
       ),
    },
@@ -38,8 +38,8 @@ const testi_data: DataType[] = [
       designation: "Global Demand Director, Fintech",
       desc: (
          <>
-            We rely on Metanova for compliant demand execution across APAC and EMEA. They are proactive with insights and quick to iterate based
-            on revenue signals, which keeps our board confident.
+            We depend on Metanova for regulation-compliant demand generation across APAC and EMEA markets. Their proactive approach to insights and rapid 
+            adaptation based on revenue indicators provides our leadership team with complete confidence.
          </>
       ),
    },
@@ -86,14 +86,14 @@ const Testimonial = () => {
             <div className="row">
                <div className="col-lg-3 col-md-4">
                   <div className="td-testimonial-left mb-40 wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
-                     <span className="td-section-subtitle mb-185 d-inline-block">CUSTOMER EVIDENCE</span>
+                     <span className="td-section-subtitle mb-185 d-inline-block">CLIENT TESTIMONIALS</span>
                      <img className="mb-20" src="/assets/img/testimonial/user.png" alt="" />
-                     <p>Pipeline-positive programs for enterprise tech brands worldwide</p>
+                     <p>Revenue-generating initiatives for global enterprise technology companies</p>
                   </div>
                </div>
                <div className="col-lg-9 col-md-8">
                   <div className="td-testimonial-content ml-80 mb-50 wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
-                     <h2 className="td-testimonial-title mb-65 td-text-invert">What Our Clients <span>Say About Pipeline</span></h2>
+                     <h2 className="td-testimonial-title mb-65 td-text-invert">Client Feedback on <span>Our Revenue Impact</span></h2>
                      <div className="row">
                         <div className="col-lg-4">
                            <div className="td-testimonial-thumb mb-40">

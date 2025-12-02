@@ -1,4 +1,5 @@
 import Hero from "./Hero"
+import TrustedBrands from "./TrustedBrands"
 import About from "./About"
 import Service from "./Service"
 import Project from "./Project"
@@ -18,6 +19,7 @@ const HomeOne = () => {
             <div id="smooth-content">
                <main>
                   <Hero />
+                  <TrustedBrands />
                   <About />
                   <Service />
                   <Project />

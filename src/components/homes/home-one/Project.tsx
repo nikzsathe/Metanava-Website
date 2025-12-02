@@ -17,35 +17,35 @@ const project_data: DataType[] = [
       class: "mr-30",
       class_2: "col-lg-4 col-md-6",
       thumb: "/assets/img/project/product.jpg",
-      title: "Enterprise SaaS: 3.2x pipeline from EMEA demand generation sprint",
+      title: "Enterprise SaaS: Achieved 3.2x pipeline growth through strategic EMEA demand generation program",
    },
    {
       id: 2,
       class: "two pt-195 ml-100 mr-100",
       class_2: "col-lg-4 col-md-6",
       thumb: "/assets/img/project/product-2.jpg",
-      title: "Cybersecurity ABM: 186 buying committees influenced in 8 weeks",
+      title: "Cybersecurity ABM: Successfully engaged 186 decision-making committees within 8 weeks",
    },
    {
       id: 3,
       class: "three pt-175 ml-70",
       class_2: "col-lg-4 col-md-6",
       thumb: "/assets/img/project/product-3.jpg",
-      title: "Cloud infra: MQL to SQL velocity reduced by 41% with nurture revamp",
+      title: "Cloud infrastructure: Accelerated MQL to SQL conversion by 41% through enhanced nurturing strategy",
    },
    {
       id: 4,
       class: "four pt-85",
       class_2: "col-lg-6 col-md-6",
       thumb: "/assets/img/project/product-4.jpg",
-      title: "Fintech scale-up: 2,400 confirmed callbacks from multilingual email ops",
+      title: "Fintech startup: Generated 2,400 verified callbacks via multilingual email marketing operations",
    },
    {
       id: 5,
       class: "five",
       class_2: "col-lg-6 col-md-12",
       thumb: "/assets/img/project/product-5.jpg",
-      title: "Hardware major: global content syndication feeding 11 regional sales pods",
+      title: "Hardware enterprise: Worldwide content distribution network supporting 11 regional sales teams",
    },
 ];
 
@@ -64,8 +64,8 @@ const Project = () => {
             <div className="row">
                <div className="col-lg-12">
                   <div className="td-project-title text-center pb-80 td-fixed-title z-index-m-1" ref={pinRef}>
-                     <span className="subtitle d-inline-block mb-15">RECENT REVENUE IMPACT</span>
-                     <h2 className="title">Programs that <span>Move the Needle</span></h2>
+                     <span className="subtitle d-inline-block mb-15">PROVEN REVENUE RESULTS</span>
+                     <h2 className="title">Initiatives that <span>Drive Real Impact</span></h2>
                   </div>
                </div>
                {project_data.map((item) => (

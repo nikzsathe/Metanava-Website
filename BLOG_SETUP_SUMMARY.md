@@ -107,3 +107,4 @@ If you encounter issues:
 **Note**: The system will automatically fall back to static data from `BlogData.ts` if Supabase is unavailable, so your site won't break if there are connection issues.
 
 
+

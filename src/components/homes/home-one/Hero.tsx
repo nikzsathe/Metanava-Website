@@ -27,16 +27,16 @@ const Hero = () => {
                <div className="col-lg-10">
                   <div className="td-hero-content">
                      <div className="td-hero-title text-center wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                        <p className="td-section-subtitle mb-10">B2B MARKETING PARTNER</p>
-                        <h1 className="title mb-10">Metanova Tech</h1>
-                        <h2 className="title">Demand. Pipeline. Revenue.</h2>
-                        <p className="mt-25 mb-35">
-                           We help enterprise marketing and sales teams land in-market accounts faster with compliant data,
-                           high-intent conversations, and omnichannel activation across the globe.
+                        <h1 className="title mb-20" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.2' }}>
+                           Elevate Your Business with a Premier B2B Lead Generation Partner
+                        </h1>
+                        <p className="mt-25 mb-35" style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '1.5rem auto 2rem' }}>
+                           Powerful B2B Lead Generation Services Designed for Agencies,<br />
+                           Aggregators, and Enterprise Organizations
                         </p>
                         <div className="td-btn-group justify-content-center">
                            <Link className="td-btn-2 td-btn-primary" to="/contact">
-                              Schedule a Strategy Call
+                              Connect With Us
                            </Link>
                            <Link className="td-btn-circle" to="/about">
                               <i className="fa-solid fa-arrow-right"></i>
@@ -84,7 +84,7 @@ const Hero = () => {
                                     />
                                  </svg>
                               </span>
-                              Full-funnel demand engine
+                              End-to-end revenue generation system
                            </li>
                            <li className="td-border"></li>
                            <li>
@@ -96,7 +96,7 @@ const Hero = () => {
                                     />
                                  </svg>
                               </span>
-                              Compliance-first data operations
+                              Regulatory-compliant data practices
                            </li>
                            <li className="td-border"></li>
                            <li>
@@ -108,7 +108,7 @@ const Hero = () => {
                                     />
                                  </svg>
                               </span>
-                              Global coverage across AMER, EMEA & APAC
+                              Worldwide reach spanning AMER, EMEA & APAC regions
                            </li>
                         </ul>
                      </div>

@@ -12,26 +12,26 @@ const process_list: DataType[] = [
    {
       id: 1,
       count: "01",
-      title: (<>Insight & <span>Audience Intelligence</span></>),
-      list: ["Ideal customer profiling", "Regulatory & data checks", "Intent + technographic mapping"],
+      title: (<>Identification</>),
+      list: ["We recognize the signals when potential customers are actively searching for solutions like yours", "Connect with prospects earlier in their evaluation process", "Establish meaningful interactions across multiple engagement channels"],
    },
    {
       id: 2,
       count: "02",
-      title: (<>Program & <span>Channel Design</span></>),
-      list: ["Offer and content strategy", "Journey + SLA blueprint", "Media and territory mix"],
+      title: (<>Filtration</>),
+      list: ["Access completely new, verified, and regulation-compliant contact information", "Enrich your current database with actionable intelligence", "Maintain the highest standards of data accuracy and applicability"],
    },
    {
       id: 3,
       count: "03",
-      title: (<>Activation & <span>Quality Governance</span></>),
-      list: ["Multilingual production pods", "QA, BANT & GDPR compliance", "Sales enablement packs"],
+      title: (<>Sales Cadence</>),
+      list: ["We identify the optimal moments when prospects are seeking solutions", "Initiate contact during the initial stages of the purchasing journey", "Refine interaction sequences for maximum effectiveness"],
    },
    {
       id: 4,
       count: "04",
-      title: (<>Pipeline & <span>Optimization</span></>),
-      list: ["Revenue dashboarding", "SQL feedback loops", "Iteration & scale roadmap"],
+      title: (<>Seal the Deal</>),
+      list: ["Ensure your sales team possesses all necessary resources and information", "Optimize appointment outcomes through strategic B2B meeting preparation", "Accelerate deal closure with pre-qualified, high-intent opportunities"],
    },
 ];
 
@@ -49,9 +49,13 @@ const Process = () => {
          <div className="container">
             <div className="row">
                <div className="col-12">
-                  <div className="td-service-title-wrap pb-10">
-                     <h2 className="td-section-title mb-0 td-text-invert d-inline-block me-3">Working</h2>
-                     <h3 className="td-section-title-capi td-text-invert d-inline-block">Process</h3>
+                  <div className="td-service-title-wrap pb-10 text-center">
+                     <h2 className="td-section-title mb-20" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
+                        Supporting Your Revenue Operations
+                     </h2>
+                     <p className="td-section-text" style={{ fontSize: '1.1rem', color: '#666', maxWidth: '700px', margin: '0 auto' }}>
+                        Discover how Metanova Tech helps you achieve consistent monthly sales objectives
+                     </p>
                   </div>
                </div>
             </div>

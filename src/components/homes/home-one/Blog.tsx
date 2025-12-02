@@ -11,22 +11,22 @@ const Blog = () => {
         <div className="row mb-50">
           <div className="col-lg-3">
             <div className="mb-20">
-              <span className="td-section-subtitle">INSIGHTS & PUBLICATIONS</span>
+              <span className="td-section-subtitle">THOUGHT LEADERSHIP & RESOURCES</span>
             </div>
           </div>
           <div className="col-lg-5">
             <div>
-                     <h2 className="td-testimonial-title mb-30 td-text-invert">News from <span>Metanova Tech</span></h2>
+                     <h2 className="td-testimonial-title mb-30 td-text-invert">Latest Updates from <span>Metanova Tech</span></h2>
             </div>
           </div>
           <div className="col-lg-4">
             <div className="mb-30">
-              <p className="mb-35">Perspectives on modern demand generation, lead governance, and Martech innovations curated by our consultants. Explore even more stories with our partners at <a className="td-text-link" href="https://martechsnews.com" target="_blank" rel="noopener noreferrer">Martechs News</a>.</p>
+              <p className="mb-35">Expert insights on contemporary demand generation strategies, lead management best practices, and marketing technology advancements selected by our team. Discover additional content through our collaboration with <a className="td-text-link" href="https://martechsnews.com" target="_blank" rel="noopener noreferrer">Martechs News</a>.</p>
               <div className="td-btn-group">
                 <Link className="td-btn-circle" to="/blog">
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
-                <Link className="td-btn-2 td-btn-primary" to="/blog">view ALL POST</Link>
+                <Link className="td-btn-2 td-btn-primary" to="/blog">VIEW ALL ARTICLES</Link>
                 <Link className="td-btn-circle" to="/blog">
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>

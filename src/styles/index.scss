@@ -97,6 +97,62 @@ body {
   margin-top: 2.5rem;
 }
 
+/* Feature Cards Hover Animations */
+.td-feature-card {
+   &:hover {
+      transform: translateY(-8px) !important;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+      
+      .td-feature-icon {
+         transform: translateY(-4px) scale(1.1) !important;
+         color: var(--td-theme-primary) !important;
+      }
+      
+      h3 {
+         color: var(--td-theme-primary) !important;
+      }
+      
+      p {
+         color: #333 !important;
+      }
+      
+      .td-feature-hover-bg {
+         opacity: 1 !important;
+      }
+   }
+   
+   &:active {
+      transform: translateY(-4px) !important;
+   }
+}
+
+/* Service Solution Cards Hover */
+.td-service-solution-card {
+   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+   
+   &:hover {
+      transform: translateY(-8px) !important;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+      
+      p {
+         color: #1a1a1a !important;
+      }
+      
+      .td-service-badge {
+         transform: scale(1.08);
+         box-shadow: 0 4px 12px rgba(92, 196, 204, 0.3);
+      }
+      
+      .td-service-hover-bg {
+         opacity: 1 !important;
+      }
+   }
+   
+   &:active {
+      transform: translateY(-4px) !important;
+   }
+}
+
 .policy-content h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -618,6 +674,43 @@ body {
     padding-top: 60px !important;
     @media (max-width: 767px) {
       padding-top: 40px !important;
+    }
+  }
+  
+  /* Ensure all footer text is white */
+  color: #ffffff !important;
+  
+  .td-footer-widget,
+  .td-footer-title,
+  .td-footer-location,
+  .td-footer-widget-list,
+  .td-footer-copyright,
+  .td-footer-legal-links,
+  a {
+    color: #ffffff !important;
+  }
+  
+  .td-footer-widget-list a,
+  .td-footer-legal-links a {
+    color: #ffffff !important;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+  }
+  
+  .td-footer-location,
+  .td-footer-copyright p,
+  p {
+    color: #ffffff !important;
+  }
+  
+  a[href^="tel:"],
+  a[href^="mailto:"] {
+    color: #ffffff !important;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
     }
   }
 }
@@ -1284,6 +1377,29 @@ body {
     opacity: 0.6;
     cursor: not-allowed;
   }
+}
+
+/* Footer Responsive Spacing - Remove blank space after address */
+.td-footer-address-widget {
+   margin-bottom: 30px;
+   
+   @media (max-width: 991px) {
+      margin-bottom: 0 !important;
+   }
+   
+   @media (max-width: 767px) {
+      margin-bottom: 0 !important;
+   }
+}
+
+.td-footer-bottom-responsive {
+   @media (max-width: 991px) {
+      margin-top: 20px !important;
+   }
+   
+   @media (max-width: 767px) {
+      margin-top: 15px !important;
+   }
 }
 
 /* Homepage Sections - Horizontal Text Layout (except Hero) */

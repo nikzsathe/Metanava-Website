@@ -181,3 +181,4 @@ If Supabase is unavailable, the system will automatically fall back to static da
 - Check `SUPABASE_SETUP.md` for detailed setup instructions
 
 
+
